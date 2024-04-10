@@ -25,10 +25,10 @@ const App = () => {
         { name: "Composition Tracking", link: 'http://localhost:8001' },
       ]
     },
-    { name: [{name: "AAS Sending", link: 'http://localhost:5050'},
+    { name: [{name: "AAS Sending", link: 'http://localhost:6060'},
             {name: "AAS Printing", link: 'http://localhost:6050'},
             ]},
-    {name: "Workers", link: 'http://localhost:4050' },
+    {name: "Workers", link: 'http://localhost:5050' },
     {name: "Printer", link: 'http://localhost:5001' },
   ];
 
