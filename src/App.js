@@ -42,7 +42,7 @@ const App = () => {
         <div key={websites[1].name} onClick={() => handleItemClick(websites[1].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[1].name}</div>
         <div key={websites[2].name} onClick={() => handleItemClick(websites[2].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[2].name}</div>
          <div class="dropdown">
-          <button class="dropbtn">Dropdown</button>
+          <button class="dropbtn">{websites[3].name[0].name}</button>
           <div class="dropdown-content">
             <a >
               <div key={websites[3].name[0].name} onClick={() => handleItemClick(websites[3].name[0].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[3].name[0].name}</div>
@@ -53,7 +53,7 @@ const App = () => {
           </div>
           </div>
           <div class="dropdown">
-          <button class="dropbtn">Dropdown</button>
+          <button class="dropbtn">{websites[4].name[0].name}</button>
           <div class="dropdown-content">
             <a >
               <div key={websites[4].name[0].name} onClick={() => handleItemClick(websites[4].name[0].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[4].name[0].name}</div>
@@ -70,17 +70,18 @@ const App = () => {
           </div>
           </div>
           <div class="dropdown">
-          <button class="dropbtn">Dropdown</button>
+          <button class="dropbtn">{websites[5].name[0].name}</button>
           <div class="dropdown-content">
             <a >
               <div key={websites[5].name[0].name} onClick={() => handleItemClick(websites[5].name[0].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[5].name[0].name}</div>
             </a>
-            <a >
+            <a>
               <div key={websites[5].name[1].name} onClick={() => handleItemClick(websites[5].name[1].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[5].name[1].name}</div>
             </a>
           </div>
           </div>
           <div key={websites[6].name} onClick={() => handleItemClick(websites[6].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[6].name}</div>
+          <div key={websites[7].name} onClick={() => handleItemClick(websites[7].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[7].name}</div>
       </div>
      
 

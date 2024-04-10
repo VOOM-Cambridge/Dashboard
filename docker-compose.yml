@@ -1,0 +1,9 @@
+
+services:
+    full_viewer:
+        restart: unless-stopped
+        build: .
+        ports:
+          - "6000:6000"
+
+
