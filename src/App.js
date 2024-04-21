@@ -68,7 +68,7 @@ const websites = [
 
                   <Dropdown.Menu>
                     {website.children.map((child) => (
-                      <Dropdown.Item onClick={() => handleItemClick(child.link)} href={child.link}>{child.name}</Dropdown.Item>
+                      <Dropdown.Item onClick={() => handleItemClick(child.link)} key={child.name}>{child.name}</Dropdown.Item>
                     ))}
                   </Dropdown.Menu>
                 </Dropdown>
