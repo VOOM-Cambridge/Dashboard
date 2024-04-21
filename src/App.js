@@ -58,7 +58,7 @@ const websites = [
   return (
     <div className="app-container">
       <div className="header">VOOM Dashboard</div>
-      <Row className="link-row">
+      <Row className="link-row bg-primary">
         {websites.map((website, index) =>
           website.children ? (
                 <Dropdown as={Col} className="dropdown-col">
@@ -74,7 +74,7 @@ const websites = [
                 </Dropdown>
           ) : (
             <Col key={index} className="link-col">
-              <Button variant="light" onClick={() => handleItemClick(website.link)}>
+              <Button variant="primary" onClick={() => handleItemClick(website.link)}>
                 {website.name}
               </Button>
             </Col>
