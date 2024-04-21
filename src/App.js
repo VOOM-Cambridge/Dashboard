@@ -13,7 +13,7 @@ const App = () => {
   let url =  window.location.hostname 
 
  const websites = [
-    { name: "Dashboards", link: 'http://' + url + ':3000/Dashboards/' },
+    { name: "Dashboards", link: 'http://' + url + ':3000/dashboards' },
     { name: "Database", link: 'http://' + url + ':8086' },
     { name: "MES Sheduling", link: 'http://' + url + ':9000' },
     { name: [{name: "Scrap Monitoring", link: 'http://' + url + ':7000'},
