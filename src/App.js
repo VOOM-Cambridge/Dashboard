@@ -13,7 +13,11 @@ const App = () => {
   let url =  window.location.hostname 
 
  const websites = [
-    { name: "Dashboards", link: 'http://' + url + ':3000/dashboards' },
+    { name: [{name: "Dashboards (all)", link: 'http://' + url + ':3000/dashboards'},
+            {name: "Power Consumption", link: 'http://' + url + ":3000/d/q39y6tRgkV2/machine-dashboard-energy?orgId=1&refresh=5s&from=1713712676265&to=1713712976265&theme=light" },
+            {name: "Scrap Recorded", link: 'http://' + url + ":3000//d/YMtDdAX4k/overview?orgId=1&from=1713108106422&to=1713712906422&theme=light" },
+            {name: "Utilisation", link: 'http://' + url + ":3000/d/q39y6tRgk/machine-dashboard?orgId=1&refresh=5s&from=1713712384153&to=1713712684153" },
+            ]},
     { name: "Database", link: 'http://' + url + ':8086' },
     { name: "MES Sheduling", link: 'http://' + url + ':9000' },
     { name: [{name: "Scrap Monitoring", link: 'http://' + url + ':7000'},
@@ -86,15 +90,16 @@ const App = () => {
       </div>
      
 
-      <div style={{ marginTop: '20px' }}>
+      <div style={{ marginTop: '5px' }}>
         {error && <div style={{ color: 'red' }}>Website not found!</div>}
         {selectedItem && (
           <iframe
             title={selectedItem}
             src={selectedItem}
-            style={{ width: '100%', height: '500px' }}
+            style={{ width: '100%', height: '800px' }}
             onError={() => setError(true)}
-          />
+            frameborder="0"
+          /> 
         )}
       </div>
     </div>
