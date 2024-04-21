@@ -4,6 +4,6 @@ services:
         restart: unless-stopped
         build: .
         ports:
-          - "1000:3000"
+          - "80:3000"
 
 

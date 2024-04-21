@@ -8,7 +8,6 @@ const App = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [error, setError] = useState(false);
   const colourBar = "primary"
-  const textTop = "link-row bg-" + {colourBar}
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
@@ -29,7 +28,7 @@ const websites = [
     ]
   },
   { name: "Database", link: `http://${url}:8086` , children: null},
-  { name: "MES Scheduling", link: `http://${url}:9000` , children: null},
+  { name: "MES Planning", link: `http://${url}:9000` , children: null},
   {
     name: "Scrap Monitoring",
     children: [
@@ -40,7 +39,7 @@ const websites = [
   {
     name: "Tracking",
     children: [
-      { name: "Location Tracking", link: `http://${url}`},
+      { name: "Location Tracking", link: `http://${url}:8000`},
       { name: "Admin Location Tracking", link: `http://${url}:8001`},
       { name: "Composition Tracking", link: `http://${url}:8001`},
     ]
@@ -70,15 +69,26 @@ const websites = [
 
                   <Dropdown.Menu>
                     {website.children.map((child) => (
-                      <Dropdown.Item onClick={() => handleItemClick(child.link)} key={child.name}>{child.name}</Dropdown.Item>
+                      <Dropdown.Item onClick={() => handleItemClick(child.link)} 
+                      key={child.name}
+                      >{child.name}</Dropdown.Item>
                     ))}
                   </Dropdown.Menu>
                 </Dropdown>
           ) : (
             <Col key={index} className="link-col">
-              <Button variant={colourBar} onClick={() => handleItemClick(website.link)}>
+              {website.name =="MES Planning" ? (
+                <Button variant={colourBar}
+                  onClick={() => handleItemClick(website.link)}
+                  href = {website.link}>
+                  {website.name}
+                </Button>
+              ):(
+                <Button variant={colourBar}
+                onClick={() => handleItemClick(website.link)}>
                 {website.name}
-              </Button>
+                </Button>
+              )}
             </Col>
           )
         )}
