@@ -7,6 +7,8 @@ import { Card, Row, Col, Dropdown, Button } from 'react-bootstrap';
 const App = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [error, setError] = useState(false);
+  const colourBar = "primary"
+  const textTop = "link-row bg-" + {colourBar}
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
@@ -58,11 +60,11 @@ const websites = [
   return (
     <div className="app-container">
       <div className="header">VOOM Dashboard</div>
-      <Row className="link-row bg-primary">
+      <Row className={"link-row bg-" + colourBar}>
         {websites.map((website, index) =>
           website.children ? (
                 <Dropdown as={Col} className="dropdown-col">
-                  <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                  <Dropdown.Toggle variant={colourBar} id="dropdown-basic">
                     {website.name}
                   </Dropdown.Toggle>
 
@@ -74,7 +76,7 @@ const websites = [
                 </Dropdown>
           ) : (
             <Col key={index} className="link-col">
-              <Button variant="primary" onClick={() => handleItemClick(website.link)}>
+              <Button variant={colourBar} onClick={() => handleItemClick(website.link)}>
                 {website.name}
               </Button>
             </Col>
