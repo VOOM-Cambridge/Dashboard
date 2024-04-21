@@ -43,7 +43,20 @@ const App = () => {
         <div key={1} style={{ cursor: 'pointer', marginRight: '20px' }}>VOOM Dashboard</div>
       </div>
       <div style={{display: 'flex', justifyContent: 'space-between', padding: '4px', backgroundColor: '#6669ff', color:'white'}}>
-        <div key={websites[0].name} onClick={() => handleItemClick(websites[0].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[0].name}</div>
+        <div class="dropdown">
+          <button class="dropbtn">{websites[0].name[0].name}</button>
+          <div class="dropdown-content">
+            <a >
+              <div key={websites[0].name[0].name} onClick={() => handleItemClick(websites[0].name[0].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[0].name[0].name}</div>
+            </a>
+            <a>
+              <div key={websites[0].name[1].name} onClick={() => handleItemClick(websites[0].name[1].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[0].name[1].name}</div>
+            </a>
+            <a>
+              <div key={websites[0].name[2].name} onClick={() => handleItemClick(websites[0].name[2].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[0].name[2].name}</div>
+            </a>
+          </div>
+          </div>
         <div key={websites[1].name} onClick={() => handleItemClick(websites[1].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[1].name}</div>
         <div key={websites[2].name} onClick={() => handleItemClick(websites[2].link)} style={{ cursor: 'pointer', marginRight: '20px' }}>{websites[2].name}</div>
          <div class="dropdown">
