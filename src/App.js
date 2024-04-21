@@ -10,26 +10,27 @@ const App = () => {
     setSelectedItem(item);
     setError(false);
   };
+  let url =  window.location.hostname 
 
  const websites = [
-    { name: "Dashboards", link: 'http://localhost:3000/Dashboards/' },
-    { name: "Database", link: 'http://localhost:8086' },
-    { name: "MES Sheduling", link: 'http://localhost:9000' },
-    { name: [{name: "Scrap Monitoring", link: 'http://localhost:7000'},
-            {name: "Scrap Monitoring Edit", link: 'http://localhost:7001/admin'},
+    { name: "Dashboards", link: 'http://' + url + ':3000/Dashboards/' },
+    { name: "Database", link: 'http://' + url + ':8086' },
+    { name: "MES Sheduling", link: 'http://' + url + ':9000' },
+    { name: [{name: "Scrap Monitoring", link: 'http://' + url + ':7000'},
+            {name: "Scrap Monitoring Edit", link: 'http://' + url + ':7001/admin'},
             ]},
     { name: [
         { name: "Tracking", link: '' },
-        { name: "Location Tracking", link: 'http://localhost' },
-        { name: "Admin Location Tracking", link: 'http://localhost:8001' },
-        { name: "Composition Tracking", link: 'http://localhost:8001' },
+        { name: "Location Tracking", link: 'http://' + url},
+        { name: "Admin Location Tracking", link: 'http://' + url + ':8001' },
+        { name: "Composition Tracking", link: 'http://' + url + ':8001' },
       ]
     },
-    { name: [{name: "AAS Sending", link: 'http://localhost:6060'},
-            {name: "AAS Printing", link: 'http://localhost:6050'},
+    { name: [{name: "AAS Sending", link: 'http://' + url + ':6060'},
+            {name: "AAS Printing", link: 'http://' + url + ':6050'},
             ]},
-    {name: "Workers", link: 'http://localhost:5050' },
-    {name: "Printer", link: 'http://localhost:5001' },
+    {name: "Workers", link: 'http://' + url + ':5050' },
+    {name: "Printer", link: 'http://' + url + ':5001' },
   ];
 
   return (
